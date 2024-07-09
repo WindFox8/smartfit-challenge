@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LegendComponent } from './components/legend/legend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FormsComponent
+    FormsComponent,
+    LegendComponent
   ],
   imports: [
     BrowserModule,
