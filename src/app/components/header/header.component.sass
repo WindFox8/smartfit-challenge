@@ -1,0 +1,52 @@
+@use '../../../styles' as var
+
+header
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    width: 100%
+    gap: 32px
+
+    .logo-container 
+        width: 100%
+        display: grid
+        place-items: center
+        padding: 18px
+        background-color: var.$dark-grey
+
+        img 
+            height: 100px
+
+    .text-container 
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        max-width: 80%
+        margin: 5vw 0
+
+        h1 
+            color: var.$dark-grey
+            font-size: 48px
+            font-weight: 900
+            letter-spacing: 2px
+
+        p 
+            color: var.$dark-grey
+            font-size: 20px
+            font-weight: 500
+        
+        .heading 
+            display: flex
+            align-items: flex-start
+            justify-content: flex-start
+            flex-direction: column
+            margin-bottom: 24px
+            gap: 14px
+
+        .heading-border 
+            height: 12px
+            width: 40%
+            background-color: var.$dark-grey
+
