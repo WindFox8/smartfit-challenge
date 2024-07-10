@@ -5,29 +5,29 @@
   </div>
   <h3>Qual período quer treinar?</h3>
   <div class="radio-wrapper">
-    <input type="radio" name="hour" value="morning" formControlName="hour"/>
+    <input type="radio" name="hour" value="morning" formControlName="hour" id="morning"/>
     <label for="morning">Manhã</label>
     <span>06:00 ás 12h</span>
   </div>
   <div class="radio-wrapper">
-    <input type="radio" name="hour" value="afternoon" formControlName="hour"/>
+    <input type="radio" name="hour" value="afternoon" formControlName="hour" id="afternoon"/>
     <label for="afternoon">Tarde</label>
     <span>12:01 ás 18h</span>
   </div>
   <div class="radio-wrapper">
-    <input type="radio" name="hour" value="night" formControlName="hour"/>
+    <input type="radio" name="hour" value="night" formControlName="hour" id="night"/>
     <label for="night">Noite</label>
     <span>18:01 ás 23h</span>
   </div>
   <div class="checkbox-wrapper">
     <div class="checkbox">
-      <input type="checkbox" name="showClosed" formControlName="showClosed"/>
+      <input type="checkbox" name="showClosed" formControlName="showClosed" id="showClosed"/>
       <label for="showClosed">Exibir unidades fechadas</label>
     </div>
-    <span>Resultados encontrados: </span>
+    <span>Resultados encontrados: {{ totalResults }}</span>
   </div>
   <div class="btn-wrapper">
-    <button class="btn btn-primary" (click)="onSubmit()">Encontrar unidade</button>
-    <button class="btn btn-secondary" (click)="onClean()">Limpar</button>
+    <button class="btn btn-primary" type="button" (click)="onSubmit()">Encontrar unidade</button>
+    <button class="btn btn-secondary" type="button" (click)="onClean()">Limpar</button>
   </div>
 </form>
