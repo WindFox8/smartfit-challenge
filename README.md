@@ -1,3 +1,26 @@
+Deploy: https://windfox8.github.io/smartfit-challenge/
+
+Ou rode na sua máquina:
+
+``` 
+git clone https://github.com/WindFox8/smartfit-challenge
+cd smartfit-challenge
+npm install
+npm start
+#siga o link exibido no terminal
+```
+
+Ou rode no Docker:
+
+``` 
+git clone https://github.com/WindFox8/smartfit-challenge
+cd smartfit-challenge
+docker build -t smartfit-challenge .
+docker run -p 8080:80 smartfit-challenge
+#acesse o localhost:8080 no navegador
+```
+
+
 # Front-end Smart Fit
 > Esse é um pequeno projeto criado como base para a avaliação de habilidades técnicas para o papel de Front-end.
 
