@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '../../UnitsInterfaces';
-import { LocationsService } from '../../services/locations.service';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-cards-list',
@@ -10,10 +10,10 @@ import { LocationsService } from '../../services/locations.service';
 export class CardsListComponent implements OnInit {
   unitsList: Location[] = [];
 
-  constructor(private locationsService: LocationsService) { }
+  constructor(private sharedService: SharedService) { }
 
   ngOnInit(): void {
-    this.locationsService.getLocations().subscribe(locations => {
+    this.sharedService.locations$.subscribe(locations => {
       this.unitsList = locations;
     });
   }

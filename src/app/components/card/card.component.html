@@ -3,7 +3,7 @@
   <h3>{{ card.title }}</h3>
   <p [innerHTML]="card.content"></p>
   <div class="divider"></div>
-  <ul>
+  <ul class="img-container">
     <img *ngIf="card.mask" [src]="'/assets/images/' + card.mask + '-mask.png'"/>
     <img *ngIf="card.towel" [src]="'/assets/images/' + card.towel + '-towel.png'"/>
     <img *ngIf="card.fountain" [src]="'/assets/images/' + card.fountain + '-fountain.png'"/>

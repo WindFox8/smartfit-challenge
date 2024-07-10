@@ -1,7 +1,9 @@
+// forms.component.ts
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LocationsService } from '../../services/locations.service';
 import { Location } from '../../UnitsInterfaces';
+import { SharedService } from '../../services/shared.service';
 
 @Component({
   selector: 'app-forms',
@@ -13,7 +15,11 @@ export class FormsComponent implements OnInit {
   formGroup!: FormGroup;
   totalResults: number = 0;
 
-  constructor(private formBuilder: FormBuilder, private locationsService: LocationsService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private locationsService: LocationsService,
+    private sharedService: SharedService
+  ) {}
 
   ngOnInit(): void {
     this.formGroup = this.formBuilder.group({
@@ -23,6 +29,7 @@ export class FormsComponent implements OnInit {
 
     this.locationsService.getLocations().subscribe(locations => {
       this.results = locations;
+      this.sharedService.setLocations(locations);
     });
   }
 
@@ -31,6 +38,7 @@ export class FormsComponent implements OnInit {
     this.locationsService.getLocations().subscribe(locations => {
       this.results = this.locationsService.filterLocations(locations, hour, showClosed);
       this.totalResults = this.results.length;
+      this.sharedService.setLocations(this.results);
     });
   }
 
@@ -38,5 +46,6 @@ export class FormsComponent implements OnInit {
     this.formGroup.reset();
     this.results = [];
     this.totalResults = 0;
+    this.sharedService.setLocations([]);
   }
 }
