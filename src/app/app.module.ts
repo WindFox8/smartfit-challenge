@@ -11,6 +11,7 @@ import { LegendComponent } from './components/legend/legend.component';
 import { LocationsService } from './services/locations.service';
 import { CardsListComponent } from './components/cards-list/cards-list.component';
 import { CardComponent } from './components/card/card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardComponent } from './components/card/card.component';
     FormsComponent,
     LegendComponent,
     CardsListComponent,
-    CardComponent
+    CardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
