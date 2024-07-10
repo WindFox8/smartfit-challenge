@@ -9,13 +9,17 @@ import { HeaderComponent } from './components/header/header.component';
 import { FormsComponent } from './components/forms/forms.component';
 import { LegendComponent } from './components/legend/legend.component';
 import { LocationsService } from './services/locations.service';
+import { CardsListComponent } from './components/cards-list/cards-list.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormsComponent,
-    LegendComponent
+    LegendComponent,
+    CardsListComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
